@@ -1,0 +1,83 @@
+
+
+$white-color:white;
+$bg-color:#fd5d14;
+$title-color:#0a165e;
+$black-color:#041424;
+$blue-color:#0119FF ;
+$linear-bg:linear-gradient(90deg, #3B6BFF 0%, #00C9FF 51%, #3B6BFF 100%) 0/200%;
+
+@mixin title($size, $weight){
+  font-size:$size;
+  font-weight:$weight;
+}
+
+.Service_sec{
+    padding:80px 0;
+    width:100%;
+    background:url(../Images/service-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
+
+    .service-heading{
+        width:100%;
+        text-align: center;
+        margin-bottom:50px;
+        span{
+            @include title(16px ,600 );
+            color:$title-color;
+            margin-bottom:5px;
+            font-family: "Poppins", serif;
+            border: 1px dashed #585b6f;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+        h2{
+            @include title(50px ,700 );
+            color:$title-color;
+            margin-bottom:5px;
+            font-family: "Poppins", serif;
+        }
+    }
+    .service-card-main{ 
+        border-radius: 30px;
+        filter: drop-shadow(0px 10px 35px rgba(177, 235, 231, 0.3));
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        padding: 39px 34px 41px;
+        margin-bottom: 20px;
+        transition: 0.5s;
+        .service-card-img{
+            img{
+                width:50px;
+            }
+        }
+        .service-card-title{
+            margin-top: 20px;
+            h2{
+                @include title(20px ,700 );
+                color:$title-color;
+                margin-bottom:10px;
+                font-family: "Poppins", serif;
+            }
+            p{
+                @include title(16px ,400 );
+                color:#686868;
+                margin-bottom:25px;
+                font-family: "Poppins", serif;
+            }
+            a{
+                text-decoration:none;
+                @include title(16px ,500 );
+                color:$white-color;
+                font-family: "Poppins", serif;
+                background:$blue-color;
+                text-transform: uppercase;
+                padding: 9px 20px;
+                border-radius: 7px;
+            }
+        }
+    }
+}
